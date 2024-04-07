@@ -26,10 +26,7 @@ type OurWonderfullRedeemer {
 
 validator {
   fn ourWonderfullValidator(
-    datum: OurWonderfullDatum,
-    redeemer: OurWonderfullRedeemer,
-    _context: Data,
-  ) -> Bool {
+    datum: OurWonderfullDatum,redeemer: OurWonderfullRedeemer,_context: Data,) -> Bool {
     datum.owd == redeemer.owr
   }
 }
