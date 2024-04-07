@@ -63,6 +63,40 @@
       "hash": "e1e1936f6729af69edb0891cad8cea43f577caa49df171c28695db20"
     },
     {
+      "title": "datumeqredeemer.handsNo1r",
+      "datum": {
+        "title": "datum",
+        "schema": {
+          "$ref": "#/definitions/datumeqredeemer~1MyType"
+        }
+      },
+      "redeemer": {
+        "title": "redeemer",
+        "schema": {
+          "$ref": "#/definitions/datumeqredeemer~1MyType"
+        }
+      },
+      "compiledCode": "5901580100003232323232323232222323232533300932323232533300d3370e9001180580109919299980799b8748008c0340144c8c94ccc044cdc38018008a5113370e002900b1bad3014001300e005003375a60240026018004002264a66601a66e1d2004300b00213232533300f3370e9002180680289919299980880188008999808800a504a266e1d2002301137546028002601c00a00666e1d2002300f375460240026018004002264a66601a66e1d2000300b0021533300d3370e900018058018a5100100114a06018004601800266ec0018014526136563002004300100423253330083370e90000008a99980598038010a4c2c2a66601066e1d200200113232533300d300f002149858dd6980680098038010a99980419b87480100044c8c94ccc034c03c008526163370e900118051baa300d0013007002163005001230043754002460086ea80055cd2ab9d5573caae7d5d0aba201",
+      "hash": "06a5178a01a8a86b17a9f6e8cb8fc6ad187144bdc323d54c0c1136c7"
+    },
+    {
+      "title": "datumeqredeemer.handsOnOne",
+      "datum": {
+        "title": "datum",
+        "schema": {
+          "$ref": "#/definitions/Data"
+        }
+      },
+      "redeemer": {
+        "title": "redeemer",
+        "schema": {
+          "$ref": "#/definitions/Data"
+        }
+      },
+      "compiledCode": "586501000032323232323232222533300553330053375e00600429444c8cdc39bad300a300500348058c94ccc018cdc3a400000226464a666016601a0042930b1bad300b0013005003163006375400429309b2b118021baa0015734aae7555cf2ab9f5742ae881",
+      "hash": "248f5d78b99a0f85c77505cf195481974af0a3b602e5a06b173c506c"
+    },
+    {
       "title": "toosimple_validators.datum22",
       "datum": {
         "title": "datum",
@@ -183,6 +217,23 @@
     }
   ],
   "definitions": {
+    "Bool": {
+      "title": "Bool",
+      "anyOf": [
+        {
+          "title": "False",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": []
+        },
+        {
+          "title": "True",
+          "dataType": "constructor",
+          "index": 1,
+          "fields": []
+        }
+      ]
+    },
     "ByteArray": {
       "dataType": "bytes"
     },
@@ -229,6 +280,39 @@
             {
               "title": "price",
               "$ref": "#/definitions/Int"
+            }
+          ]
+        }
+      ]
+    },
+    "datumeqredeemer/MyType": {
+      "title": "MyType",
+      "anyOf": [
+        {
+          "title": "Unit",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": []
+        },
+        {
+          "title": "Number",
+          "dataType": "constructor",
+          "index": 1,
+          "fields": [
+            {
+              "title": "x",
+              "$ref": "#/definitions/Int"
+            }
+          ]
+        },
+        {
+          "title": "YesorNo",
+          "dataType": "constructor",
+          "index": 2,
+          "fields": [
+            {
+              "title": "yn",
+              "$ref": "#/definitions/Bool"
             }
           ]
         }
