@@ -79,3 +79,4 @@ bash repo/justvalidators$ aiken blueprint convert -m typed_validators -v ourWond
 Aiken blueprint --help
 
 bash repo/justvalidators$ aiken blueprint address -m typed_validators -v ourWonderfullValidator . > ./testnet/outWonderfullValidator.addr
+
