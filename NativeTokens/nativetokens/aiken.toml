@@ -1,0 +1,14 @@
+name = "validators/nativetokens"
+version = "0.0.0"
+license = "Apache-2.0"
+description = "Aiken contracts for project 'validators/nativetokens'"
+
+[repository]
+user = "validators"
+project = "nativetokens"
+platform = "github"
+
+[[dependencies]]
+name = "aiken-lang/stdlib"
+version = "1.8.0"
+source = "github"

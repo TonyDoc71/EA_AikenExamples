@@ -1,0 +1,79 @@
+{
+  "preamble": {
+    "title": "validators/nativetokens",
+    "description": "Aiken contracts for project 'validators/nativetokens'",
+    "version": "0.0.0",
+    "plutusVersion": "v2",
+    "compiler": {
+      "name": "Aiken",
+      "version": "v1.0.26-alpha+075668b"
+    },
+    "license": "Apache-2.0"
+  },
+  "validators": [
+    {
+      "title": "eacoins.eaCoins",
+      "redeemer": {
+        "title": "redeemer",
+        "schema": {
+          "$ref": "#/definitions/eacoins~1ConditionsRedeemer"
+        }
+      },
+      "compiledCode": "59015e0100003232323232322323225333005325333006300430073754600260106ea80144cc88c8cc004004dd618069807180718071807180718071807180718059baa00322533300d00114a0264a66601666e3cdd718078010020a51133003003001300f0013001300837540046eb8c028c02cc02cc020dd5002899199119299980519b8748008c02cdd5000899b89002375a601c60186ea8004528180218059baa3003300b37540046016601860186018601860186018601860126ea8c008c024dd50019bad30013009375400c4601660180024601400229309b2b2999801980098021baa00213232323232323232533300e3010002132498c94ccc030c02800454ccc03cc038dd50040a4c2c2a66601866e1d20020011533300f300e37540102930b0b18061baa00716375a601c002601c0046eb8c030004c030008dd698050009805001180400098029baa00216370e90002b9a5573aaae7955cfaba15745",
+      "hash": "5fb50bbf42e9222d0423c0e320285745946eb244597df2de580eb0ea"
+    }
+  ],
+  "definitions": {
+    "ByteArray": {
+      "dataType": "bytes"
+    },
+    "Int": {
+      "dataType": "integer"
+    },
+    "eacoins/Action": {
+      "title": "Action",
+      "anyOf": [
+        {
+          "title": "Owner",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": []
+        },
+        {
+          "title": "Time",
+          "dataType": "constructor",
+          "index": 1,
+          "fields": []
+        }
+      ]
+    },
+    "eacoins/ConditionsRedeemer": {
+      "title": "ConditionsRedeemer",
+      "anyOf": [
+        {
+          "title": "ConditionsRedeemer",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "action",
+              "$ref": "#/definitions/eacoins~1Action"
+            },
+            {
+              "title": "deadline",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "owner",
+              "$ref": "#/definitions/ByteArray"
+            },
+            {
+              "title": "price",
+              "$ref": "#/definitions/Int"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
